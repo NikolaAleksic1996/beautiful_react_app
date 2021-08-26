@@ -1,18 +1,21 @@
 import React from 'react';
 //Components
 import Header from './components/Header';
-import Todo from './components/Todo/Todo'
+import Todo from './components/Todo/Todo';
 
 //Styles
 import {GlobalStyle} from './GlobalStyle';
-import {TodoStyles} from './components/Todo/TodoStyles';
 
 function App() {
     return (
-        <div className="App">
+        <div>
             <Header/>
             <h1>TODOS</h1>
             <Todo text='Learn React' />
+            <Todo text='Learn Symfony' />
+            <Todo text='Learn Exams' />
+            <Todo text='Relax' />
+
             <GlobalStyle/>
         </div>
     );
