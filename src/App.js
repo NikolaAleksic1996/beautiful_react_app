@@ -16,6 +16,7 @@ import HomePage from './pages/Home';
 import SignUp from "./pages/SignUp";
 import LoginPage from "./pages/Login";
 import Layout from "./components/header/Layout";
+import Profile from './pages/Profile';
 
 //examples
 //const Star = () => React.createElement('div', null, 'This is star');
@@ -32,6 +33,9 @@ const App = () => {
                 </Route>
                 <Route path='/sign-up'>
                     <SignUp />
+                </Route>
+                <Route path='/profile'>
+                    <Profile />
                 </Route>
             </Switch>
             <GlobalStyle/>

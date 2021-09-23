@@ -1,7 +1,7 @@
 import api from './api';
 
-export const signUp = async (name, surname, username, password) => {
-    const {data} = await api.post('/register', {name, surname, username, password});
+export const signUp = async (name, surname, email, password) => {
+    const {data} = await api.post('/register', {name, surname, email, password});
     //const {user, token} = data;
 
     //localStorage.setItem('tokens', JSON.stringify(token))
@@ -11,19 +11,17 @@ export const signUp = async (name, surname, username, password) => {
 
 export const login = async (email, password) => {
 
-    const {data} = await api.post('/login', {
+    const data = await api.post('/login', {
         email, password
     });
 
-    if (data.accessToken) {
-        localStorage.setItem("user", JSON.stringify(data));
-    }
+    localStorage.setItem('token', JSON.stringify(data.data[0]));
 
     return data;
 };
 
 export const logout = () => {
-    localStorage.removeItem("user");
+    localStorage.removeItem('token');
 };
 
 export const getCurrentUser = () => {
