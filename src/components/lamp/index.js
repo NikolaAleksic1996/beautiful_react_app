@@ -13,10 +13,10 @@ const Room = styled.div`
     `;
 
 function Bulb() {
-    // Lamp one
+    // lamp one
     //  const [state, setState]
     const [isLampOneOn, setIsLampOneOn] = useState(false);
-    // Lamp two
+    // lamp two
     const [isLampTwoOn, setIsLampTwoOn] = useState(true);
 
     const handleLightSwitchOne = () => setIsLampOneOn(prev => !prev);

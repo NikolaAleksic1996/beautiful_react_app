@@ -5,8 +5,8 @@ import {useState} from "react";
 import './index.css'
 
 //Components
-import Modal from '../Modal';
-import Backdrop from "../Backdrop";
+import Modal from '../dropDownForDelete/Modal';
+import Backdrop from "../dropDownForDelete/Backdrop";
 
 function Todo(props) {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -35,6 +35,3 @@ function Todo(props) {
 }
 
 export default Todo
-
-//anonymous function function() {} === () => {} arrow function
-// {modalIsOpen && <Backdrop onCancel={closeModalHandler} />} === { modalIsOpen ? <Backdrop onCancel={closeModalHandler}/> : null }
