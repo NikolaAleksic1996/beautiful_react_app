@@ -1,7 +1,4 @@
 import React from "react";
-import { useForm } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as Yup from 'yup';
 import {
     Switch,
     Route
@@ -11,7 +8,6 @@ import {
 import {GlobalStyle} from './GlobalStyle';
 
 //Components
-import Header from './components/header';
 import HomePage from './pages/Home';
 import SignUp from "./pages/SignUp";
 import LoginPage from "./pages/Login";

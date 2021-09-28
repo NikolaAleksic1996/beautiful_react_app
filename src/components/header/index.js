@@ -1,8 +1,7 @@
-import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 
 import Logo from '../../images/CodeusHRLogo.png';
-import {LogoImg, NavBtnLink} from "./Header.styles";
+import {LogoImg} from "./Header.styles";
 // import {
 //     Collapse,
 //     Navbar,

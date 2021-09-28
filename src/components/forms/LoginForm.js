@@ -2,7 +2,6 @@ import  { useState} from "react";
 import * as authService from '../services/auth';
 import "./LoginForm.model.css";
 import {Redirect} from "react-router-dom";
-import {getUser} from "../services/user.service";
 
 function LoginForm() {
     const [email, setUsername] = useState('')

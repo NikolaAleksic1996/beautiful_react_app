@@ -1,59 +1,61 @@
 import {useEffect, useState} from "react";
 import {getUser} from "../components/services/user.service";
-import {set} from "react-hook-form";
+import User from "../components/forms/User";
 import axios from "axios";
-import MeetupList from "../components/forms/MeetupList";
+import authHeader from "../components/services/auth-header";
+
 
 
 const Profile = () => {
 
-    const [loadedData, setLoadedData]  = useState([]);
+    const [blogs, setBlogs] = useState([
+        { title: 'My new website', body: 'lorem ipsum', author: 'nikola', id: 1 },
+        { title: 'My new website', body: 'lorem ipsum', author: 'kole', id: 2 },
+        { title: 'My new website', body: 'lorem ipsum', author: 'nidza', id: 3 }
+    ]);
+    const [user, setUser]  = useState(null);
     const [loading, setLoading]  = useState(true);
     const [error, setError]  = useState(null);
 
     const token = JSON.parse(localStorage.getItem('token'));
+
     useEffect( () => {
-        // (
-            fetch('http://localhost:8000/api/user', {
-                method: 'get',
-                headers: new Headers({
-                    'Authorization': 'Bearer: ' + token
-                })
-            }).then((response) => {
-                return response.json();
-            }).then((data) => {
-                const meetups = [];
+       fetch('http://localhost:8000/api/user', {
+            headers: authHeader(),
+        }).then(response => {
+           return response.json();
+        }).then(data => {
+           setUser(data);
+            setLoading(false);
 
-                for (const key in data){
-                    const meetup = {
-                        id: key,
-                        ...data[key]
-                    };
+        })
+        // .catch(error => {
+        //     console.error("Error fetching data: ", error);
+        //     setError(error);
+        // })
+        // .finally(() => {
+        //     setLoading(false);
+        // })
+        // const data = await getUser();
 
-                    meetups.push(meetup);
-                }
 
-                console.log(data);
-                 setLoading(false);
-                 setLoadedData(data);
-            })
-        // )();
+        //setUser([0].data.data);
     }, []);
 
-
-
-    if(loading) {
-        return (
-            <section>
-                <p>Loading. . . .</p>
-            </section>
-        )
-    }
+     // console.log(JSON.stringify(user));
+    // if(loading) {
+    //     return (
+    //         <section>
+    //             <p>Loading. . . .</p>
+    //         </section>
+    //     )
+    // }
 
     return(
       <div>
-          <p>You clicked times</p>
-          <MeetupList meetups={loadedData} />
+          {loading && <div>Loading. . .</div>}
+          { user && <User user={Object.values(user)}/> }
+
           <button>
               Click me
           </button>

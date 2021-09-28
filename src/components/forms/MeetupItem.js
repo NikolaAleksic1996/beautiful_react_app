@@ -1,6 +1,4 @@
-import Card from '../ui/Card';
-import classes from './MeetupItem.module.css';
-import { Button } from 'reactstrap';
+
 function MeetupItem(props) {
     return (
         <li>
