@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-10-25T12:32:39.840Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="m9p2KP_OBBIjkyJjbcrL" version="15.5.9" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-25T14:30:00.455Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36" etag="8o7Bsz-8oAXmz0n0Bi1v" version="15.5.9" type="github">
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
-    <mxGraphModel dx="937" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1719" dy="1057" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -204,6 +204,15 @@
         </mxCell>
         <mxCell id="lKNaCeP2jfFVg3W1JIAj-65" value="After login&lt;br&gt;appears ProfileButton" style="whiteSpace=wrap;html=1;shape=mxgraph.basic.oval_callout" parent="1" vertex="1">
           <mxGeometry x="500" y="335" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l5AL3S803URggjhr_-wo-1" value="HISTORY" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="140" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="l5AL3S803URggjhr_-wo-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="l5AL3S803URggjhr_-wo-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="236" y="150" as="sourcePoint" />
+            <mxPoint x="350" y="148" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
